@@ -1,0 +1,43 @@
+[root@MySql-RHEL-7 khaja]# history
+    1  ifconfig
+    2  init 0
+    3  ifconfig
+    4  init 6
+    5  ifconfig
+    6  yum update
+    7  ifconfig
+    8  ls
+    9  rpm -ivh epel-release-latest-7.noarch.rpm
+   10  rpm -ivh python-pyasn1-0.1.9-11.3.1.noarch.rpm
+   11  mkdir /tmp/ansible
+   12  cd /tmp/ansible/
+   13  ls
+   14  pwd
+   15  ifconfig
+   16  ls
+   17  cd ansible/
+   18  ls
+   19  yum update
+   20  yum repolist
+   21  ls
+   22  rpm -ivh python2-ecdsa-0.13-4.el7.noarch.rpm
+   23  rpm -ivh python2-paramiko-1.16.1-2.el7.noarch.rpm
+   24  rpm -ivh python-httplib2-0.7.7-3.el7.noarch.rpm
+   25  rpm -ivh python-jinja2-2.7.2-2.el7.src.rpm
+   26  rpm -ivh python-keyczar-0.71c-2.el7.noarch.rpm
+   27  rpm -ivh sshpass-1.06-1.el7.x86_64.rpm
+   28  rpm -ivh ansible-2.3.1.0-1.el7.noarch.rpm
+   29  ansible --version
+   30  ansible-galaxy init khaja
+   31  ls
+   32  cd khaja/
+   33  ls
+
+  Jinja package instalation 
+               wget ftp://bo.mirror.garr.it/2/scientific/7x/SRPMS/vendor/python-jinja2-2.7.2-2.el7.src.rpm
+   
+
+
+Reference :
+  http://esbmagic.blogspot.my/2015/09/ansible-installation-on-redhat-rhel.html
+
