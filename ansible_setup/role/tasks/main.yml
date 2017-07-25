@@ -1,0 +1,43 @@
+---
+- hosts: all 
+  become: yes
+  tasks:
+                                 # tasks file for role
+  - name: creating tem folder
+    file:
+      path: /tmp/ansible
+      state: directory
+      mode: 0755
+  - name: copy rpm file
+    copy:
+      src: "{{ item }}"
+      dest: /tmp/ansible/
+      mode: 0644
+    with_fileglob: "{{epel_rpm_file}}"
+
+  - name: installing epel-relase package
+    yum:
+      name: /tmp/ansible/epel-release-latest-7.noarch.rpm
+      state: present
+  - name: installing python package
+    yum:
+      name: /tmp/ansible/python-jinja2-2.7.2-2.el7.src.rpm
+      state: present
+  - name: installing python package
+    yum:
+      name: /tmp/ansible/python-keyczar-0.71c-2.el7.noarch.rpm
+      state: present
+  - name: installing ansible package
+    yum:
+      name:  ansible
+      state: present
+  - name: installing python package
+    yum:
+      name: /tmp/ansible/python2-paramiko-1.16.1-2.el7.noarch.rpm
+      state: present
+  - name: installing python package
+    yum:
+      name: /tmp/ansible/sshpass-1.06-1.el7.x86_64.rpm
+      state: present
+
+

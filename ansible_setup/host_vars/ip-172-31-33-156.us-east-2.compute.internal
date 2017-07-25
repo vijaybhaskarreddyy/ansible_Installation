@@ -1,0 +1,2 @@
+---
+epel_rpm_file: /home/ansible/Ansible/ansible_Installation/ansible_setup/role/files/*.rpm
