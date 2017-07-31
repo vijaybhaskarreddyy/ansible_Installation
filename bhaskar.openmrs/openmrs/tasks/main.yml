@@ -1,0 +1,19 @@
+---
+# tasks file for openmrs
+- name: installing tomcat
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{pack_redhat}}"
+- name: memory increase
+  template:
+    src: template/tomcat.conf.j2
+    dest: /usr/share/tomcat/conf/tomcat.conf
+- name: memory increase
+  template:
+    src: template/tomcat-users.xml.j2
+    dest: /usr/share/tomcat/conf/tomcat-users.xml
+  notify:
+    - restart tomcat
+
+

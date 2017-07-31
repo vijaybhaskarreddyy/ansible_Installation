@@ -1,0 +1,4 @@
+---
+pack_redhat: ["tomcat", "tomcat-webapps", "tomcat-admin-webapps"]
+               
+
