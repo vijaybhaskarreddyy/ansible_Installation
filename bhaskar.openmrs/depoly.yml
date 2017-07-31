@@ -1,8 +1,0 @@
----
-- name: deploy openmrs war
-  get_url:
-    url: https://excellmedia.dl.sourceforge.net/project/openmrs/releases/OpenMRS_Platform_2.0.5/openmrs.war
-    dest: /usr/share/tomcat/webapps/
-  notify:
-    - restart tomcat
-
